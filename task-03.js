@@ -22,7 +22,8 @@ const images = [
 const list = document.querySelector('#gallery')
 const imagesList = images.forEach(({ url ,alt }) => 
  list.insertAdjacentHTML(`afterbegin`, `<li> <img src = '${url}', alt = ${alt}, width='350' height='250'>`))
-console.log(imagesList);
+// console.log(imagesList);
+
 
 
 /* 

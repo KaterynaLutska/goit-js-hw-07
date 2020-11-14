@@ -1,22 +1,22 @@
 // task 02 //
 
-// const ingredients = [
-//   'Картошка',
-//   'Грибы',
-//   'Чеснок',
-//   'Помидоры',
-//   'Зелень',
-//   'Приправы',
-// ];
+const ingredients = [
+  'Картошка',
+  'Грибы',
+  'Чеснок',
+  'Помидоры',
+  'Зелень',
+  'Приправы',
+];
 
-// const ingredientsList = document.createElement('ul')
+const ingredientsList = document.createElement('ul')
 
-// const ingredientItem = ingredients.forEach((el) =>
-//     (el = document.createElement('li'),
-//     ingredientsList.append(el)
-//   ))
+const ingredientItem = ingredients.forEach((el) =>
+    (el = document.createElement('li'),
+    ingredientsList.append(el)
+  ))
 
-//  console.log(ingredientItem);
+ //console.log(ingredientItem);
 
 /* 
 Напиши скрипт, который для каждого элемента массива
