@@ -19,3 +19,17 @@ h3 {
   color: saddlebrown;
   border: red;
 }
+
+.list-img li {
+  list-style: none;
+  justify-content: center;
+  width: calc((100% - 30px * 2) / 3);
+  margin-right: 30px;
+}
+
+.list-img {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  background-color: tomato;
+}

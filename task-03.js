@@ -18,17 +18,26 @@ const images = [
   },
 ];
 
- 
+// 1 варіант //
+
 const list = document.querySelector('#gallery')
+list.classList.add('list-img')
 
 const imagesList = images.forEach(({ url, alt }) => 
- list.insertAdjacentHTML(`afterbegin`, `<li> <img src = '${url}', alt = ${alt}, width='350'>`))
+list.insertAdjacentHTML(`beforeend`, `<li> <img src = '${url}', alt = ${alt}, width='350', height='250'>`))
+const imageItem = document.querySelector('ul li')
 
-list.style.listStyle = 'none';
-list.style.backgroundColor = 'red';
-list.style.width = 'calc((100% * 2) / 3)';
-list.style.paddingTop = '20px'
-list.style.paddingBottom = '20px'
+ 
+ // 2 варіант // 
+
+// const list = document.querySelector('#gallery');
+
+// const imageTag = ({ url, alt }) => {
+//   return`<li> <img src = '${url}', alt = ${alt}, width='320'</li>`
+// };
+// const makeHTML = images.map(imageTag).join('');
+// list.insertAdjacentHTML('beforeend', makeHTML)
+
 
 
 /* 
