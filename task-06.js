@@ -2,12 +2,15 @@ const input = document.getElementById('validation-input');
 const number = document.querySelectorAll(`[data-length="6"]`)
 
 
-input.classList.add('validation-input', 'removeListner');
+input.classList.add('validation-input');
 
 input.addEventListener('blur', (elem) => {
     elem.preventDefault()
     const users = elem.target.value;
- users.length <= input.dataset.length ? input.classList.add('valid') : input.classList.add('invalid') 
+
+    users.length <= input.dataset.length
+        ? input.classList.add('valid') || input.classList.remove('invalid')
+        : input.classList.add('invalid') || input.classList.remove('valid')
 })
 
 
