@@ -1,7 +1,7 @@
 const input = document.getElementById('validation-input');
 let i;
 input.classList.add('validation-input');
-input.addEventListener('click', (elem) => {
+input.addEventListener('focus', (elem) => {
     const users = elem.target.value;
     for (i = 0; i <= users.length; i++) {
  i <= 6 ? input.classList.add('valid') : input.classList.add('invalid')

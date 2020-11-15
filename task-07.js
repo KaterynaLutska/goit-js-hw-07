@@ -3,7 +3,7 @@ const inputSize = document.getElementById('font-size-control')
 const spanText = document.getElementById('text')
 
 inputSize.addEventListener('input', () => {
-    spanText.style.fontSize = '45px'
+    spanText.style.fontSize = `${inputSize.value}px`;
 })
 
 

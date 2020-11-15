@@ -7,8 +7,6 @@ addName.addEventListener('input', elm => {
     newName.textContent = userName
 })
 
-
-
 /*
 Напиши скрипт который, при наборе текста в инпуте input#name-input 
 (событие input), 

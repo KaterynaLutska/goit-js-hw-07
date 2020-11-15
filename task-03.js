@@ -18,12 +18,17 @@ const images = [
   },
 ];
 
-// 1 спроба // 
+ 
 const list = document.querySelector('#gallery')
-const imagesList = images.forEach(({ url ,alt }) => 
- list.insertAdjacentHTML(`afterbegin`, `<li> <img src = '${url}', alt = ${alt}, width='350' height='250'>`))
-// console.log(imagesList);
 
+const imagesList = images.forEach(({ url, alt }) => 
+ list.insertAdjacentHTML(`afterbegin`, `<li> <img src = '${url}', alt = ${alt}, width='350'>`))
+
+list.style.listStyle = 'none';
+list.style.backgroundColor = 'red';
+list.style.width = 'calc((100% * 2) / 3)';
+list.style.paddingTop = '20px'
+list.style.paddingBottom = '20px'
 
 
 /* 
