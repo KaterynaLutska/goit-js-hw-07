@@ -3,42 +3,39 @@
 const images = [
   {
     url:
-      'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-    alt: 'White and Black Long Fur Cat',
+      "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    alt: "White and Black Long Fur Cat",
   },
   {
     url:
-      'https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-    alt: 'Orange and White Koi Fish Near Yellow Koi Fish',
+      "https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    alt: "Orange and White Koi Fish Near Yellow Koi Fish",
   },
   {
     url:
-      'https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-    alt: 'Group of Horses Running',
+      "https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    alt: "Group of Horses Running",
   },
 ];
 
-// 1 варіант //
+// 1 варіант  погано //
 
-const list = document.querySelector('#gallery')
-list.classList.add('list-img')
+// const list = document.querySelector('#gallery')
 
-const imagesList = images.forEach(({ url, alt }) => 
-list.insertAdjacentHTML(`beforeend`, `<li> <img src = '${url}', alt = ${alt}, width='350', height='250'>`))
-const imageItem = document.querySelector('ul li')
+// const imagesList = images.forEach(({ url, alt }) =>
+// list.insertAdjacentHTML(`beforeend`, `<li> <img src = '${url}', alt = ${alt}, width='350', height='250'>`))
+// const imageItem = document.querySelector('ul li')
 
- 
- // 2 варіант // 
+// 2 варіант  добре //
 
-// const list = document.querySelector('#gallery');
+const list = document.querySelector("#gallery");
+list.classList.add("list-img");
 
-// const imageTag = ({ url, alt }) => {
-//   return`<li> <img src = '${url}', alt = ${alt}, width='320'</li>`
-// };
-// const makeHTML = images.map(imageTag).join('');
-// list.insertAdjacentHTML('beforeend', makeHTML)
-
-
+const imageTag = ({ url, alt }) => {
+  return `<li> <img src = '${url}', alt = ${alt}, width='350', height='250'</li>`;
+};
+const makeHTML = images.map(imageTag).join("");
+list.insertAdjacentHTML("beforeend", makeHTML);
 
 /* 
 Используй массив объектов images для создания тегов img вложенных в li. 
@@ -46,5 +43,3 @@ const imageItem = document.querySelector('ul li')
 
 Все элементы галереи должны добавляться в DOM за одну операцию вставки.
 Добавь минимальное оформление галереи флексбоксами или гридами через css-классы. */
-
-

@@ -1,18 +1,19 @@
-const input = document.getElementById('validation-input');
-const number = document.querySelectorAll(`[data-length="6"]`)
+const input = document.getElementById("validation-input");
+const number = document.querySelectorAll(`[data-length="6"]`);
 
+input.classList.add("validation-input");
 
-input.classList.add('validation-input');
-
-input.addEventListener('blur', (elem) => {
-    elem.preventDefault()
-    const users = elem.target.value;
-
-    users.length <= input.dataset.length
-        ? input.classList.add('valid') || input.classList.remove('invalid')
-        : input.classList.add('invalid') || input.classList.remove('valid')
-})
-
+input.addEventListener("blur", (elem) => {
+  const users = elem.target.value;
+  const value = input.dataset.length;
+  if (users.length === 0) {
+    input.classList.remove("valid") || input.classList.remove("invalid");
+  } else if (users.length === +value) {
+    input.classList.add("valid") || input.classList.remove("invalid");
+  } else if (users.length !== value) {
+    input.classList.add("invalid");
+  }
+});
 
 /*
 Напиши скрипт, который бы при потере фокуса на инпуте, 
