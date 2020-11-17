@@ -9,7 +9,7 @@ const ingredients = [
   "Приправы",
 ];
 
-// 1 method //
+// 1 method кращий  //
 
 const ingList = document.getElementById("ingredients");
 
@@ -22,7 +22,7 @@ const ingredientsItems = (el) => {
 const list = ingredients.map((item) => ingredientsItems(item));
 ingList.append(...list);
 
-// 2 method //
+// 2 method гірший //
 
 // const ingredientsList = document.getElementById("ingredients");
 // const ingredientsItems = [];
