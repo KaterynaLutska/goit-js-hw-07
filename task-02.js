@@ -19,6 +19,7 @@ const ingredientsItems = (el) => {
   return itemRef;
 };
 
+
 const list = ingredients.map((item) => ingredientsItems(item));
 ingList.append(...list);
 
